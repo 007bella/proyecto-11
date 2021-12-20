@@ -21,14 +21,14 @@ path.scale=1.2;
 boy = createSprite(180,340,30,30);
 boy.scale=0.08;
 boy.addAnimation("JakeRunning",boyImg);
-  
+
 
 leftBoundary=createSprite(0,0,100,800);
 
-// leftBoundary.invisible = false;
-// leftBoundary.visible = true;
-// leftBoundary.invisible = true;
-// leftBoundary.visible = false;
+ leftBoundary.invisible = false;
+leftBoundary.visible = true;
+ leftBoundary.invisible = true;
+ leftBoundary.visible = false;
 
 
 rightBoundary=createSprite(410,0,100,800);
@@ -46,21 +46,21 @@ function draw() {
   boy.collide(leftBoundary);
   boy.collide(rightBoundary);
   
-  //código para reiniciar el fondo
+  
+  if(path.y > 400 ){
+    path.y = height/4;
+  }
 
-  /*if(path.y > 400 ){
-    path.y = height/2;
-  }*/
-
-  /*if(path.y > 400 ){
+  if(path.y > 400 ){
    
   path.y = height/2;
-  }*/
+  }
 
-  /*if(path.y > 400 ){
-path.y = height/2;}*/
+  if(path.y > 400 ){
+path.y = height/2;}
 
-/*if(path.y > 400 ){path.y = height/2;}*/
+if(path.y > 400 ){path.y = height/2;}
+
   
   drawSprites();
 }
